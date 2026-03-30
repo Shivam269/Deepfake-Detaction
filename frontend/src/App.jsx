@@ -156,7 +156,7 @@ function ScannerOverlay({ onClose }) {
 }
 
 // ── Main App ─────────────────────────────────────────────────────────────────
-const API_URL = 'http://localhost:8000'; // Standard local endpoint
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'; 
 
 function App() {
   const [analysisData, setAnalysisData] = useState(null);
